@@ -1,0 +1,74 @@
+[
+  {
+    "id": 0,
+    "name": "Amy",
+    "image": "/img/amy.png"
+    
+  },
+  {
+    "id": 1,
+    "name": "Bender",
+    "image": "/img/bender2.jpg"
+    
+  },
+  {
+    "id": 2,
+    "name": "Calculon",
+    "image": "/img/calculon2.jpg"
+    
+  },
+  {
+    "id": 3,
+    "name": "Fry",
+    "image": "/img/fry.png"
+    
+  },
+  {
+    "id": 4,
+    "name": "Roberto",
+    "image": "/img/roberto.jpg"
+   
+  },
+  {
+    "id": 5,
+    "name": "Dwayne",
+    "image": "/img/dwayne.jpg"
+    
+  },
+  {
+    "id": 6,
+    "name": "Morbo",
+    "image": "/img/morbo.jpg"
+   
+  },
+  {
+    "id": 7,
+    "name": "Nibbler",
+    "image": "/img/nibbler.jpg"
+    
+  },
+  {
+    "id": 8,
+    "name": "Professor",
+    "image": "/img/professor2.jpeg"
+    
+  },
+  {
+    "id": 9,
+    "name": "Wernstrom",
+    "image": "/img/wernstrom.jpg"
+    
+  },
+  {
+    "id": 10,
+    "name": "Zapp",
+    "image": "/img/zapp2.jpg"
+   
+  },
+  {
+    "id": 11,
+    "name": "Zoidberg",
+    "image": "/img/zoidberg.jpg"
+    
+  }
+]
