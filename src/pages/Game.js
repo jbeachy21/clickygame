@@ -14,33 +14,20 @@ class Game extends Component {
     tracker: []
   }
 
-  //  onClick(event) {
-  //   this.state.friends.sort(() => Math.random() - 0.5);
-  //   this.setState({ friends });
-  //   this.state.count++;
-  //   this.setState({ count: this.state.count });
-  //   document.getElementById("score").innerHTML = "Score: " + this.state.count;
-  //  }
-
-
-
   onClick = event => {
-    
-    const key = event.target.key;
+    //debugger;
+    const key = event.target.id;
     console.log(key);
     //shuffles friend cards
 
-
-    
     this.state.friends.sort(() => Math.random() - 0.5)
     this.setState({ friends });
     //gets id of friend card clicked 
     //detects if a friend card is clicked twice
-    if (this.state.tracker.findIndex(key)) {
+    if (this.state.tracker.includes(key) > 0) {
       //resets count = 0 and tracker = []
       this.setState({ count: 0 })
       this.setState({ tracker: []});
-      document.getElementById("score").innerHTML = "Score: " + this.state.count;
     }
     else {
       let newCount = this.state.count + 1;
@@ -49,7 +36,6 @@ class Game extends Component {
       this.setState({ count: newCount });
       this.state.tracker.push(key);
       this.setState({ tracker: this.state.tracker});
-      document.getElementById("score").innerHTML = "Score: " + this.state.count;
     }
     
   }
@@ -57,7 +43,7 @@ class Game extends Component {
   render() {
     return (
       <Wrapper>
-        <Navbar /> 
+        <Navbar score={this.state.count} /> 
         <Hero backgroundImage={Background}>
           <h1>Clicky Game: The Futurama Version!</h1>
           <h2>Click an image to earn points but don't click twice</h2>
