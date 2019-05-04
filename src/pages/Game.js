@@ -45,7 +45,7 @@ class Game extends Component {
       <Wrapper>
         <Navbar score={this.state.count} /> 
         <Hero backgroundImage={Background}>
-          <h1>Clicky Game: The Futurama Version!</h1>
+          <h1>Clicky Game: The Futurama Version</h1>
           <h2>Click an image to earn points but don't click twice</h2>
         </Hero>
         <Container style={{ marginTop: 30 }} className="d-flex">
