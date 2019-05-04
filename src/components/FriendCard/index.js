@@ -3,7 +3,7 @@ import "./style.css";
 
 function FriendCard(props) {
   return (
-    <button onClick={(event) => props.onClick(event)}>
+    <button onClick={props.onClick}>
     <div className="card">
     
       <div className="img-container">

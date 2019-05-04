@@ -14,31 +14,44 @@ class Game extends Component {
     tracker: []
   }
 
-   
+  //  onClick(event) {
+  //   this.state.friends.sort(() => Math.random() - 0.5);
+  //   this.setState({ friends });
+  //   this.state.count++;
+  //   this.setState({ count: this.state.count });
+  //   document.getElementById("score").innerHTML = "Score: " + this.state.count;
+  //  }
 
-  onClick(event) {
+
+
+  onClick = event => {
     
-    const id = event.target.id;
-    console.log("Id: " + id);
+    const key = event.target.key;
+    console.log(key);
     //shuffles friend cards
-    this.state.friends.sort(() => Math.random() - 0.5);
+
+
+    
+    this.state.friends.sort(() => Math.random() - 0.5)
     this.setState({ friends });
     //gets id of friend card clicked 
     //detects if a friend card is clicked twice
-    if (this.state.tracker.includes(id)) {
+    if (this.state.tracker.findIndex(key)) {
       //resets count = 0 and tracker = []
       this.setState({ count: 0 })
       this.setState({ tracker: []});
       document.getElementById("score").innerHTML = "Score: " + this.state.count;
     }
     else {
+      let newCount = this.state.count + 1;
       //add id to tracker 
-      this.state.count++;
-      this.setState({ count: this.state.count });
-      this.state.tracker.push(id);
+      
+      this.setState({ count: newCount });
+      this.state.tracker.push(key);
       this.setState({ tracker: this.state.tracker});
+      document.getElementById("score").innerHTML = "Score: " + this.state.count;
     }
-    document.getElementById("score").innerHTML = "Score: " + this.state.count;
+    
   }
 
   render() {
@@ -59,8 +72,6 @@ class Game extends Component {
               name={friend.name}
               image={friend.image}
               onClick={this.onClick}
-              
-                
           />
           </li>
         ))}
