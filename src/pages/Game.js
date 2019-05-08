@@ -28,6 +28,7 @@ class Game extends Component {
       //resets count = 0 and tracker = []
       this.setState({ count: 0 })
       this.setState({ tracker: []});
+      alert("You have clicked the same image twice. GAME OVER! Your participation trophy is en route via mail");
     }
     else {
       let newCount = this.state.count + 1;
